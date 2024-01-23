@@ -63,7 +63,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\HiteModLoader\HiteModLoader\lib\detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\HiteModLoader\HiteModLoader\lib\detours.lib;steam\steam_api64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -84,7 +84,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\HiteModLoader\HiteModLoader\lib\detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\HiteModLoader\HiteModLoader\lib\detours.lib;steam\steam_api64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -92,6 +92,45 @@
     <ClInclude Include="GameLink.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SigScan.h" />
+    <ClInclude Include="steam\isteamapplist.h" />
+    <ClInclude Include="steam\isteamapps.h" />
+    <ClInclude Include="steam\isteamappticket.h" />
+    <ClInclude Include="steam\isteamclient.h" />
+    <ClInclude Include="steam\isteamcontroller.h" />
+    <ClInclude Include="steam\isteamfriends.h" />
+    <ClInclude Include="steam\isteamgamecoordinator.h" />
+    <ClInclude Include="steam\isteamgameserver.h" />
+    <ClInclude Include="steam\isteamgameserverstats.h" />
+    <ClInclude Include="steam\isteamhtmlsurface.h" />
+    <ClInclude Include="steam\isteamhttp.h" />
+    <ClInclude Include="steam\isteaminventory.h" />
+    <ClInclude Include="steam\isteammasterserverupdater.h" />
+    <ClInclude Include="steam\isteammatchmaking.h" />
+    <ClInclude Include="steam\isteammusic.h" />
+    <ClInclude Include="steam\isteammusicremote.h" />
+    <ClInclude Include="steam\isteamnetworking.h" />
+    <ClInclude Include="steam\isteamparentalsettings.h" />
+    <ClInclude Include="steam\isteamps3overlayrenderer.h" />
+    <ClInclude Include="steam\isteamremotestorage.h" />
+    <ClInclude Include="steam\isteamscreenshots.h" />
+    <ClInclude Include="steam\isteamugc.h" />
+    <ClInclude Include="steam\isteamuser.h" />
+    <ClInclude Include="steam\isteamuserstats.h" />
+    <ClInclude Include="steam\isteamutils.h" />
+    <ClInclude Include="steam\isteamvideo.h" />
+    <ClInclude Include="steam\luautils.h" />
+    <ClInclude Include="steam\matchmakingtypes.h" />
+    <ClInclude Include="steam\steamclientpublic.h" />
+    <ClInclude Include="steam\steamencryptedappticket.h" />
+    <ClInclude Include="steam\steamhttpenums.h" />
+    <ClInclude Include="steam\steamps3params.h" />
+    <ClInclude Include="steam\steamtypes.h" />
+    <ClInclude Include="steam\steamuniverse.h" />
+    <ClInclude Include="steam\steamworks.h" />
+    <ClInclude Include="steam\steam_api.h" />
+    <ClInclude Include="steam\steam_api_flat.h" />
+    <ClInclude Include="steam\steam_api_internal.h" />
+    <ClInclude Include="steam\steam_gameserver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

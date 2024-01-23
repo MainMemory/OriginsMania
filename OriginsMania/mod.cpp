@@ -2,6 +2,7 @@
 #include "HiteModLoader.h"
 #include "Helpers.h"
 #include "SigScan.h"
+#include "steam/steam_api.h"
 
 #undef STATUS_TIMEOUT
 #ifndef RETRO_REVISION
@@ -172,6 +173,14 @@ void API_DeleteUserFileMod(const char* name, void (*callback)(int32 status))
         callback(status == 0 ? STATUS_OK : STATUS_ERROR);
 }
 
+bool32 hasplus = false;
+bool32 API_CheckDLCMod(int32 dlc)
+{
+    if (dlc == 0)
+        return hasplus;
+    return false;
+}
+
 void(__fastcall* LinkGameLogicDLL)(EngineInfo* engineInfo);
 HOOK(void, __fastcall, LinkGameLogic, SigLinkGameLogic(), EngineInfo* engineInfo)
 {
@@ -188,6 +197,12 @@ HOOK(void, __fastcall, LinkGameLogic, SigLinkGameLogic(), EngineInfo* engineInfo
     apitbl->SaveUserFile = API_SaveUserFileMod;
     auto delfileapi = apitbl->DeleteUserFile;
     apitbl->DeleteUserFile = API_DeleteUserFileMod;
+    auto isoverapi = apitbl->IsOverlayEnabled;
+    auto checkdlcapi = apitbl->CheckDLC;
+    auto showoverapi = apitbl->ShowExtensionOverlay;
+    apitbl->IsOverlayEnabled = reinterpret_cast<decltype(apitbl->IsOverlayEnabled)>(showoverapi);
+    apitbl->CheckDLC = API_CheckDLCMod;
+    apitbl->ShowExtensionOverlay = reinterpret_cast<decltype(apitbl->ShowExtensionOverlay)>(checkdlcapi);
 
 	LinkGameLogicDLL(engineInfo);
 
@@ -196,6 +211,9 @@ HOOK(void, __fastcall, LinkGameLogic, SigLinkGameLogic(), EngineInfo* engineInfo
     functbl->SaveUserFile = savefilersdk;
     apitbl->SaveUserFile = savefileapi;
     apitbl->DeleteUserFile = delfileapi;
+    apitbl->IsOverlayEnabled = isoverapi;
+    apitbl->CheckDLC = checkdlcapi;
+    apitbl->ShowExtensionOverlay = showoverapi;
 
     auto regobj = functbl->RegisterObject;
 	functbl->RegisterObject = RegisterObjectMod;
@@ -235,4 +253,11 @@ extern "C" __declspec(dllexport) void Init(ModInfo * modInfo)
 	}
 
 	INSTALL_HOOK(LinkGameLogic);
+
+    if (SteamAPI_Init())
+    {
+        ISteamApps* steamapps = SteamApps();
+        if (steamapps)
+            hasplus = steamapps->BIsDlcInstalled(845640);
+    }
 }

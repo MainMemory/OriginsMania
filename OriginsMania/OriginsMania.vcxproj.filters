@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\steam">
+      <UniqueIdentifier>{59527c74-afbe-4762-9bc4-f0b16ec31325}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -26,6 +29,123 @@
     </ClInclude>
     <ClInclude Include="GameLink.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamapplist.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamapps.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamappticket.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamclient.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamcontroller.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamfriends.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamgamecoordinator.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamgameserver.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamgameserverstats.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamhtmlsurface.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamhttp.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteaminventory.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteammasterserverupdater.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteammatchmaking.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteammusic.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteammusicremote.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamnetworking.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamparentalsettings.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamps3overlayrenderer.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamremotestorage.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamscreenshots.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamugc.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamuser.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamuserstats.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamutils.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\isteamvideo.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\luautils.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\matchmakingtypes.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steam_api.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steam_api_flat.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steam_api_internal.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steam_gameserver.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamclientpublic.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamencryptedappticket.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamhttpenums.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamps3params.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamtypes.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamuniverse.h">
+      <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="steam\steamworks.h">
+      <Filter>Header Files\steam</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
